@@ -1,0 +1,12 @@
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS checkUserInDb;
+
+CREATE PROCEDURE checkUserInDb(IN arg VARCHAR(255))
+BEGIN
+    SELECT COUNT(*) as count FROM users
+    WHERE name = arg;	
+END //
+
+DELIMITER ;
+

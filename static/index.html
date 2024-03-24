@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign-In</title>
+    </head>
+    <body>
+        <div class="container-fluid" id="app">
+            <div class="jumbotron jumbotron-fluid text-center">
+                <div v-if="!authenticated" class="form-group text-center">
+                    <input class="col-4 mx-auto form-control" type="text" name="username" v-model="input.username" placeholder="Username" />
+                    <input class="col-4 mx-auto form-control" type="password" name="password" v-model="input.password" placeholder="Password" />
+                    <button class="col-4 btn btn-outline-success" type="button" v-on:click="login()">Login</button>
+                </div>
+                <div v-else class="text-center">
+                    <button type="button" class="btn btn-outline-danger" v-on:click="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/scripts.js" ></script>
+    </body>
+</html>
